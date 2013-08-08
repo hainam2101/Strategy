@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F02B6CE3-DA8A-4B23-BAD0-8FAF0DB4DAFE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Strategy</RootNamespace>
+    <AssemblyName>Strategy</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>F:\bc\POkusy\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\Strategy.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>878EE73AC131DBAABF849CA76E71FFCD9961891A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Strategy_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="irrKlang.NET4, Version=1.0.4534.25937, Culture=neutral, PublicKeyToken=a854741bd80517c7, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\irrKlang.NET4.dll</HintPath>
+    </Reference>
+    <Reference Include="Miyagi, Version=1.3.0.18796, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Miyagi.dll</HintPath>
+    </Reference>
+    <Reference Include="Mogre, Version=1.7.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Mogre.dll</HintPath>
+    </Reference>
+    <Reference Include="MOIS, Version=1.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\MOIS.dll</HintPath>
+    </Reference>
+    <Reference Include="Roslyn.Compilers, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Roslyn.Compilers.dll</HintPath>
+    </Reference>
+    <Reference Include="Roslyn.Compilers.CSharp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Roslyn.Compilers.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\MissingMaterialException.cs" />
+    <Compile Include="Exceptions\PropertyMissingException.cs" />
+    <Compile Include="Exceptions\XmlLoadException.cs" />
+    <Compile Include="FightMgr\IBulletStopReciever.cs" />
+    <Compile Include="GameGUI\GameActionIconBox.cs" />
+    <Compile Include="GameGUI\IGameGUI.cs" />
+    <Compile Include="GameGUI\PopUpPanel.cs" />
+    <Compile Include="GameGUI\SaveGameButton.cs" />
+    <Compile Include="GameObjectControl\Game Objects\Bullet\IBullet.cs" />
+    <Compile Include="FightMgr\DamageCounter.cs" />
+    <Compile Include="FightMgr\Fight.cs" />
+    <Compile Include="FightMgr\FightManager.cs" />
+    <Compile Include="FightMgr\IFightManager.cs" />
+    <Compile Include="FightMgr\Occupation.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GameGUI\CloseButton.cs" />
+    <Compile Include="GameGUI\PropertyLabel.cs" />
+    <Compile Include="GameGUI\SelectionLabel.cs" />
+    <Compile Include="GameMaterial\IMaterial.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameMaterial\Matrial.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameObjectControl\ActionAnswer.cs" />
+    <Compile Include="GameObjectControl\Game Objects\Bullet\Missile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameObjectControl\Game Objects\GameActions\DieAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameObjectControl\Game Objects\GameActions\IGameAction.cs" />
+    <Compile Include="GameObjectControl\Game Objects\GameActions\StopMoveAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameObjectControl\Game Objects\GameLoad\RunTimeCreator.cs" />
+    <Compile Include="GameObjectControl\Game Objects\GameLoad\XmlLoader.cs" />
+    <Compile Include="GameObjectControl\Game Objects\GameObject.cs" />
+    <Compile Include="GameObjectControl\Game Objects\GameSave\ConstructorFieldAttribute.cs" />
+    <Compile Include="GameObjectControl\Game Objects\GameSave\GameSerializer.cs" />
+    <Compile Include="GameObjectControl\Game Objects\GameTargets\ITarget.cs" />
+    <Compile Include="GameObjectControl\Game Objects\IGameObject.cs" />
+    <Compile Include="GameObjectControl\Game Objects\HitTest.cs" />
+    <Compile Include="GameObjectControl\Game Objects\IGameObjectCreator.cs" />
+    <Compile Include="GameObjectControl\Game Objects\MovableGameObjectBox\IMovableGameObject.cs" />
+    <Compile Include="GameObjectControl\Game Objects\MyDieArgs.cs" />
+    <Compile Include="GameObjectControl\Game Objects\StaticGameObjectBox\Gate.cs" />
+    <Compile Include="GameObjectControl\Game Objects\StaticGameObjectBox\IStaticGameObject.cs" />
+    <Compile Include="GameObjectControl\GroupMgr\TargetedGroupManager.cs" />
+    <Compile Include="GameObjectControl\GroupMgr\TargetPointer.cs" />
+    <Compile Include="GameObjectControl\Traveler.cs" />
+    <Compile Include="GameObjectControl\GameObjectManager.cs" />
+    <Compile Include="GameObjectControl\RuntimeProperty\EditablePair.cs" />
+    <Compile Include="GameObjectControl\RuntimeProperty\PropertyEnum.cs" />
+    <Compile Include="GameObjectControl\GroupMgr\Group.cs" />
+    <Compile Include="GameObjectControl\Game Objects\MovableGameObjectBox\MovableGameObject.cs" />
+    <Compile Include="GameObjectControl\Game Objects\StaticGameObjectBox\StaticGameObject.cs" />
+    <Compile Include="GameObjectControl\Game Objects\ObjectCreator.cs" />
+    <Compile Include="GameObjectControl\GroupMgr\GroupManager.cs" />
+    <Compile Include="GameObjectControl\RuntimeProperty\Property.cs" />
+    <Compile Include="GameObjectControl\RuntimeProperty\PropertyManager.cs" />
+    <Compile Include="GameObjectControl\SolarSystem.cs" />
+    <Compile Include="GameObjectControl\SolarSystemManager.cs" />
+    <Compile Include="MissionControl\Mission.cs" />
+    <Compile Include="MogreControl\MouseControl.cs" />
+    <Compile Include="GameGUI\GameGUI.cs" />
+    <Compile Include="MogreControl\SelectionRectangle.cs" />
+    <Compile Include="MoveMgr\IFinishMovementReciever.cs" />
+    <Compile Include="MoveMgr\IMoveManager.cs" />
+    <Compile Include="MoveMgr\MoveManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Exceptions\ShutdownException.cs" />
+    <Compile Include="Sound\IEffectPlayer.cs" />
+    <Compile Include="Sound\IGameSoundPlayer.cs" />
+    <Compile Include="Sound\SoundPlayer.cs" />
+    <Compile Include="MogreControl\Tutorial Framework\BaseApplication.cs" />
+    <Compile Include="MogreControl\Tutorial Framework\BaseApplication.input.cs" />
+    <Compile Include="MogreControl\Tutorial Framework\CameraMan.cs" />
+    <Compile Include="MogreControl\Tutorial Framework\DebugOverlay.cs" />
+    <Compile Include="TeamControl\Team.cs" />
+    <Compile Include="TeamControl\TeamManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
